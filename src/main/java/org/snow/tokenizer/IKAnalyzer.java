@@ -27,8 +27,11 @@ public class IKAnalyzer {
     }
 
     public static List<String> tokenizer(String sentence){
-        String filterString = sentence.replaceAll("[^（\u4E00-\u9FA0]｜[A-Za-z0-9]+$）"," ");
 
+        if (sentence == null){
+            return null;
+        }
+        String filterString = sentence.replaceAll("[^（\u4E00-\u9FA0]｜[A-Za-z0-9]+$）"," ");
         if (filterString == null || filterString.isEmpty()){
             return null;
         }

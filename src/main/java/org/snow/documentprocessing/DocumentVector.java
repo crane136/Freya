@@ -34,6 +34,9 @@ public class DocumentVector {
     }
 
     private void documentBuild(){
+        if (wordList == null || wordList.isEmpty()){
+            return;
+        }
         wordCountMapper = new HashMap<String, List<Integer>>();
         List<Integer> positionList;
         int position = 0;
